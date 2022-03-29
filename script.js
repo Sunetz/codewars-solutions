@@ -112,7 +112,7 @@ getParticipants(6) */
 
 duplicateEncode('Success') */
 
-function nthFibo(n) {
+/* function nthFibo(n) {
     let arr=[0, 1];
     for(let i=2; i<n; i++){
         console.log(i)
@@ -122,4 +122,16 @@ function nthFibo(n) {
     console.log(arr[n-1])
     return arr[n-1]
 }
-nthFibo(5)
+nthFibo(5) */
+
+function solution(number){
+    if(number < 0){
+        return 0
+    }else{
+        const arr = Array.from(Array(number).keys()).filter(num=>num%3===0 || num%5===0);
+        return arr.reduce((sum, num)=>sum+num)
+        
+    }
+}
+
+solution(10)
