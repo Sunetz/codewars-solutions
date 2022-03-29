@@ -93,7 +93,7 @@ explode('123') */
 
 getParticipants(6) */
 
-function duplicateEncode(word) {
+/* function duplicateEncode(word) {
     word = word.toLowerCase();
     if (new Set(word).size === word.length) {
         console.log('('.repeat(word.length))
@@ -110,4 +110,16 @@ function duplicateEncode(word) {
     }
 }
 
-duplicateEncode('Success')
+duplicateEncode('Success') */
+
+function nthFibo(n) {
+    let arr=[0, 1];
+    for(let i=2; i<n; i++){
+        console.log(i)
+        arr.push(arr[i-2]+arr[i-1])
+        
+    }
+    console.log(arr[n-1])
+    return arr[n-1]
+}
+nthFibo(5)
