@@ -75,7 +75,7 @@ disemvowel("This website is for losers LOL!");*/
 }
 isIsogram('oo') */
 
-function explode(s) {
+/* function explode(s) {
     const arr = s.split('');
     let new_arr = []
     for(let i=0; i<arr.length; i++){
@@ -84,4 +84,30 @@ function explode(s) {
     return new_arr.join('');
 }
 
-explode('123')
+explode('123') */
+
+/* function getParticipants(handshakes){
+    console.log((1 + (1 + 8*handshakes)**0,5)/2)
+    return(1 + (1 + 8*handshakes)**0,5)/2
+}
+
+getParticipants(6) */
+
+function duplicateEncode(word) {
+    word = word.toLowerCase();
+    if (new Set(word).size === word.length) {
+        console.log('('.repeat(word.length))
+        return '('.repeat(word.length)
+    } else {
+        let count = [];
+        let arr=[];
+        for (let i = 0; i < word.length; i++) {
+            count = word.split('').filter(char => char === word[i]);     
+            count.length > 1 ? arr.push(')') : arr.push('(');            
+        }
+        console.log(arr.join(''))
+
+    }
+}
+
+duplicateEncode('Success')
